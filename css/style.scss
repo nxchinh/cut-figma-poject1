@@ -274,11 +274,15 @@ input,select{vertical-align:middle}
         height: 723px;
         &__content {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+            align-items: center;
+            height: 100%;
             &-left {
+                grid-column: span 2 / span 2;
                 position: relative;
+                height: 100%;
                 .content-left-box{
-                    position: relative;
                     width: 280px;
                     background: #FFFFFF;
                     border: 1px solid #FFFFFF;
@@ -323,12 +327,13 @@ input,select{vertical-align:middle}
                 .content-left-box-client {
                     z-index: 1;
                     position: absolute;
-                    right: 60px;
-
+                    right: 120px;
+                    top: 100px;
                 }
                 .content-left-box-project {
                     position: absolute;
-                    top: 99px;
+                    top: 210px;
+                    right: 400px;
                     .img-project {
                         left: -30px;
                     }
@@ -336,20 +341,95 @@ input,select{vertical-align:middle}
                 .content-left-box-award {
                     z-index: 1;
                     position: absolute;
-                    right: 150px;
-                    top: 235px; 
+                    right: 152px;
+                    top: 340px; 
                 }
                 .content-left-box-years {
                     position: absolute;
-                    top: 370px;
+                    top: 440px;
+                    right: 360px;
                     .img-years {
                         top: 120px;
                     }
                 }
             }
             &-right {
+                .title-right {
+                    color: #2947A9;
+                    font-weight: 700;
+                    font-size: 60px;
+                    margin-bottom: 40px;
+                }
+                .content-right {
+                    color: #525B7A;
+                    font-weight: 400;
+                    font-size: 20px;
+                    margin-bottom: 51px;
+                }
+                .button-contact {
+                    background: #2947A9;
+                    border-radius: 2px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 16px 20px;
+                    gap: 10px;
+                    width: 176px;
+                    cursor: pointer;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
             }
         }
         
+    }
+    .ads {
+        background: #FFFFFF;
+        background-image: url("../img/ads.png");
+        height: 300px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #FFFFFF;
+        &-content {
+            &__title {
+                font-weight: 700;
+                font-size: 36px;
+            }
+            &__contact {
+                font-weight: 400;
+                font-size: 24px;
+                .phone_number {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &-view {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 20px;
+            gap: 10px;
+            box-sizing: border-box;
+            border: 2px solid #FFFFFF;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 18px;
+            height: 21px;
+            cursor: pointer;
+        }
+    }
+    .project {
+        height: 1098px;
+        padding: 88px 112px;
+        &-heading {
+            font-weight: 700;
+            font-size: 36px;
+            color: #292E3D;
+            margin-bottom: 40px;
+        }
     }
 }
