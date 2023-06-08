@@ -296,7 +296,8 @@ input, select {
   display: flex;
   flex-wrap: wrap;
   row-gap: 48px;
-  column-gap: 98px;
+  -moz-column-gap: 98px;
+       column-gap: 98px;
   justify-content: center;
 }
 .container .service__box__item {
